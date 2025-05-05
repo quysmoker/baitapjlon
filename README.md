@@ -29,10 +29,15 @@ Một công cụ Python giúp **tự động tra cứu vi phạm giao thông** t
 ## 📂 Cấu trúc dự án
 
 ├── giai_ma_captcha.py # Hàm giải mã CAPTCHA từ ảnh
+
 ├── setup_driver.py # Cấu hình và khởi tạo WebDriver (Chrome)
+
 ├── tra_cuu.py # Chức năng tra cứu vi phạm
+
 ├── main.py # File chạy chính
+
 ├── README.md # Tài liệu hướng dẫn sử dụng
+
 ├── requirements.txt # Danh sách thư viện cần cài
 
 
