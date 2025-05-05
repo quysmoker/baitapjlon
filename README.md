@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🚦 Tra Cứu Vi Phạm Giao Thông Tự Động
 
 Một công cụ Python giúp **tự động tra cứu vi phạm giao thông** từ trang web của cơ quan chức năng bằng cách sử dụng **Selenium** để tự động điều khiển trình duyệt và **OCR (pytesseract + OpenCV)** để giải mã CAPTCHA.
@@ -74,8 +74,7 @@ CAPTCHA có thể thay đổi định dạng, cần điều chỉnh thuật toá
 
 📧 Thông tin liên hệ
 Tác giả: Hồ Văn Quý
-Email: nvanquyh181@gmail.com
+Email: vanquyh181@gmail.com
 GitHub: https://github.com/quysmoker
 =======
-# baitapjlon
->>>>>>> 4ebc3dffb1d919eaad905613c372ca7ac17802b8
+
