@@ -1,0 +1,4 @@
+selenium
+schedule
+opencv-python
+pytesseract
