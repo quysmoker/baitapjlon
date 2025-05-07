@@ -25,7 +25,6 @@ def tra_cuu(dieu_khien, bien_kiem_soat, phuong_tien=0):
     # Nhấn nút tìm kiếm
     tim_kiem = dieu_khien.find_element(By.XPATH, '//*[@id="formBSX"]/div[2]/input[1]')
     tim_kiem.click()
-
     time.sleep(10)
 
     # Kiểm tra mã xác nhận

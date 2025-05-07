@@ -6,7 +6,6 @@ from tra_cuu import tra_cuu
 # Hàm thực hiện tra cứu
 def thuc_hien_tra_cuu():
     print("Đang thực hiện tra cứu phương tiện vi phạm...")
-
     # 1. Vào website đã chọn.
     dieu_khien = init_driver()
     dieu_khien.get("https://www.csgt.vn/tra-cuu-phuong-tien-vi-pham.html")
@@ -25,7 +24,7 @@ def thuc_hien_tra_cuu():
     dieu_khien.quit()
 
 # 4. Set lịch chạy 6h sáng và 12h trưa hằng ngày.
-schedule.every().day.at("01:35").do(thuc_hien_tra_cuu)
+schedule.every().day.at("06:00").do(thuc_hien_tra_cuu)
 schedule.every().day.at("12:00").do(thuc_hien_tra_cuu)
 
 # Vòng lặp chính chạy liên tục và kiểm tra lịch
