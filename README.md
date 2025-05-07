@@ -46,19 +46,12 @@ Một công cụ Python giúp **tự động tra cứu vi phạm giao thông** t
 ## 🚀 Hướng dẫn cài đặt và sử dụng
 
 
-```bash
+
 1. Cài đặt thư viện cần thiết
-
+    ```bash
     pip install -r requirements.txt
-    Nếu chưa có requirements.txt, hãy tạo file đó với nội dung sau:
-    selenium
-    pytesseract
-    opencv-python
-    schedule
-
-
 2. Cài đặt Tesseract OCR
-
+    ```bash
     🔧 Trên Windows
     Tải và cài từ: https://github.com/tesseract-ocr/tesseract
     Sau khi cài xong, cập nhật đường dẫn trong code:
@@ -67,11 +60,9 @@ Một công cụ Python giúp **tự động tra cứu vi phạm giao thông** t
     🐧 Trên Linux
     sudo apt update
     sudo apt install tesseract-ocr
-
-
 3. Chạy chương trình
-    python main.py
-
+    ```bash
+        python main.py
 ⚠️ Lưu ý
 Không nên gửi quá nhiều yêu cầu liên tục để tránh bị chặn IP.
 CAPTCHA có thể thay đổi định dạng, cần điều chỉnh thuật toán xử lý ảnh nếu lỗi.
@@ -81,5 +72,3 @@ CAPTCHA có thể thay đổi định dạng, cần điều chỉnh thuật toá
 Tác giả: Hồ Văn Quý
 Email: vanquyh181@gmail.com
 GitHub: https://github.com/quysmoker
-=======
-

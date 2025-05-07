@@ -8,26 +8,27 @@ from giai_ma_captcha import giai_ma_captcha
 
 
 def tra_cuu(driver, bien_so, loai_phuong_tien_index=0):
+    #Nhập biển số xe
     license_plate_input = driver.find_element(By.XPATH, '//*[@id="formBSX"]/div[2]/div[1]/input')
     license_plate_input.clear()
     license_plate_input.send_keys(bien_so)
-
+    #chọn loại phương tiện 
     vehicle_type_dropdown = driver.find_element(By.XPATH, '//*[@id="formBSX"]/div[2]/div[2]/select')
     select = Select(vehicle_type_dropdown)
     select.select_by_index(loai_phuong_tien_index)
-
+    #Nhận và nhập mã captcha
     captcha_text = giai_ma_captcha(driver)
     print("🔐 CAPTCHA nhận được là:", captcha_text)
-
     captcha_input = driver.find_element(By.XPATH, '//*[@id="formBSX"]/div[2]/div[3]/div/input')
     captcha_input.clear()
     captcha_input.send_keys(captcha_text)
-
+    #Nhấn nút tìm kiếm
     submit_button = driver.find_element(By.XPATH, '//*[@id="formBSX"]/div[2]/input[1]')
     submit_button.click()
 
     time.sleep(10)
 
+    #Dùng vòng lặp để đảm bảo mã captcha nhập đúng
     try:
         alert = driver.find_element(By.XPATH, '//*[@id="formBSX"]/div[2]/div[4]')
         if "Mã xác nhận sai" in alert.text:
@@ -38,6 +39,7 @@ def tra_cuu(driver, bien_so, loai_phuong_tien_index=0):
         pass
 
     try:
+        # Kiểm tra nếu có thông báo "Không tìm thấy kết quả"
         not_found_div = driver.find_element(By.XPATH, '//*[@id="bodyPrint123"]/div')
         if "Không tìm thấy kết quả" in not_found_div.text:
             print("📭 Không tìm thấy kết quả vi phạm.")
